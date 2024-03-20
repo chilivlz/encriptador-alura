@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-color: var(--dark-blue) #f3f5fc;
+  scrollbar-width: none;
+}
+
+:root {
+  --light-blue-100: #f3f5fc;
+  --dark-blue: #0a3871;
+  --dark-blue-400: #072b61;
+  --gray: #495057;
+
+  --padding-container: 24px 0;
+}
+
+body {
+  background-color: #f3f5fc;
+  scrollbar-color: var(--dark-blue) #f3f5fc;
+  scrollbar-width: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-container);
+}
+
+/* .hero{
+  min-height: 100vh;
+} */
+
+.hero__encriptador {
+  margin: 50px 0 0 0;
+}
+
+.text-area {
+  font-family: Arial, sans-serif; /* Tipo de fuente */
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px; /* Altura de línea */
+  letter-spacing: 0em;
+  text-align: left;
+  border: none; /* Elimina el borde */
+  outline: none; /* Elimina el resaltado al enfocar */
+  resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+  width: 100%; /* Opcional: ocupa todo el ancho disponible */
+  min-height: 200px; /* Altura predeterminada */
+  max-height: 650px; /* maxima altura*/
+  /*   padding: 10px 10px 10px 17px; Espacio interno para que el texto no esté pegado a los bordes */
+  color: var(--dark-blue);
+  background-color: var(--light-blue-100);
+  height: 300px;
+  overflow-y: auto;
+}
+
+textarea::placeholder {
+  color: var(--dark-blue);
+
+  /* font-size: 32px;
+font-weight: 400; */
+}
+
+.text-area-alternativo {
+  display: none;
+}
+
+.hero__message {
+  display: flex;
+  gap: 8px;
+}
+
+.hero__paragraph {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--gray);
+}
+
+.hero__buttons {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.button__blue {
+  background-color: var(--dark-blue);
+  color: #fff;
+  padding: 24px;
+  border-radius: 24px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button__blue:hover {
+  background-color: var(--dark-blue-400);
+}
+
+.button__white {
+  background-color: #fff;
+  color: var(--dark-blue);
+  padding: 24px;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button__white:hover {
+  background-color: #e9ecf8;
+}
+
+.text-area__desencriptador {
+  /* display: none; */
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 32px;
+  gap: 32px;
+  margin-top: 44px;
+  margin-bottom: 40px;
+  width: 327px;
+  width: 100%;
+  height: 186px;
+  box-shadow: 0px 24px 32px -8px #00000014;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo__desencriptador {
+  width: 263px;
+  height: 58px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.paragraph__desencriptador {
+  width: 263px;
+  height: 48px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 1px;
+  color: var(--gray);
+}
+
+.text-area2__desencriptador {
+  /* display: none; */
+  margin-top: 20px;
+  width: 343px;
+  width: 100%;
+  height: 595px;
+  padding: 32px;
+  border-radius: 32px;
+  gap: 32px;
+  background-color: #fff;
+  box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+.text-area__desencriptador-alternativo {
+  display: none;
+}
+
+.posicionar__boton {
+  position: relative;
+  display: none;
+  width: 100%;
+}
+
+.button__desencriptar {
+  /* display: none; */
+  position: absolute;
+  background-color: #fff;
+  width: 279px;
+  height: 67px;
+  padding: 24px;
+  border-radius: 24px;
+  gap: 8px;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #0a3871;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button__desencriptar:hover {
+  background-color: #e9ecf8;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero__alura {
+    content: url("images/logo-tablet.svg");
+  }
+
+  .hero__encriptador {
+    margin: 50px 0 0 0;
+  }
+
+  .hero__message {
+    display: flex;
+    gap: 8px;
+  }
+
+  .hero__paragraph {
+    width: 205px;
+    height: 18px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--gray);
+  }
+
+  .hero__buttons {
+    display: flex;
+    flex-direction: row;
+
+    gap: 24px;
+  }
+
+  .button__blue {
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 24px;
+    border-radius: 24px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  .button__blue:hover {
+    background-color: var(--dark-blue-400);
+  }
+
+  .button__white {
+    background-color: #fff;
+    color: var(--dark-blue);
+    padding: 24px;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  .text-area__desencriptador {
+    width: 688px;
+    width: 90%;
+    height: 133px;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 32px;
+    gap: 32px;
+    margin-top: 44px;
+    margin-bottom: 40px;
+
+    box-shadow: 0px 24px 32px -8px #00000014;
+    text-align: c;
+  }
+
+  .titulo__desencriptador {
+    width: 624px;
+    height: 29px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    /* margin: 0 auto; */
+  }
+
+  .paragraph__desencriptador {
+    width: 624px;
+    height: 24px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    /* margin: 0 auto; */
+    margin-top: 16px;
+    color: var(--gray);
+  }
+
+  .text-area2__desencriptador {
+    /* display: none; */
+    margin-top: 20px;
+    width: 100%;
+    height: 343px;
+    padding: 32px;
+    border-radius: 32px;
+    gap: 32px;
+    background-color: #fff;
+    box-shadow: 0px 24px 32px -8px #00000014;
+  }
+
+  .posicionar__boton {
+    position: relative;
+  }
+
+  .button__desencriptar {
+    /* display: none; */
+    position: absolute;
+    background-color: #fff;
+    width: 624px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    gap: 8px;
+    bottom: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #0a3871;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: 100vw;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+      "log log log . . desc desc"
+      "main main main main main desc desc"
+      "main main main main main desc desc"
+      "main main main main main desc desc"
+      "main main main main main desc desc";
+  }
+
+  .hero__nav {
+    grid-area: log;
+  }
+  .hero__encriptador {
+    grid-area: main;
+  }
+  .hero__desencriptador {
+    grid-area: desc;
+    height: 100%;
+    grid-row: 1/-1;
+    display: flex;
+    align-items: flex-end;
+  }
+  .text-area {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .text-area-alternativo {
+    display: none;
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px; /* Altura de línea */
+    letter-spacing: 0em;
+    text-align: left;
+    border: none; /* Elimina el borde */
+    outline: none; /* Elimina el resaltado al enfocar */
+    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+    width: 100%; /* Opcional: ocupa todo el ancho disponible */
+    min-height: 200px; /* Altura predeterminada */
+    max-height: 650px; /* maxima altura*/
+    /*   padding: 10px 10px 10px 17px; Espacio interno para que el texto no esté pegado a los bordes */
+    color: var(--dark-blue);
+    background-color: var(--light-blue-100);
+    height: 300px;
+    overflow-y: auto;
+  }
+
+  .text-area__desencriptador {
+    display: none;
+    /* grid-area: desc; */
+  }
+
+  .text-area__desencriptador-alternativo {
+    display: block;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 32px;
+    gap: 32px;
+    margin-top: 44px;
+    margin-bottom: 40px;
+    width: 400px;
+    height: 90%;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dibujo-imagen {
+    width: 90%;
+    height: 304px;
+  }
+
+  .text-area2__desencriptador {
+    display: none;
+    /* display: none; */
+    width: 100%;
+    height: 944px;
+
+    border-radius: 32px;
+    margin-top: 0;
+    /* margin-bottom: 24px; */
+
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 32px;
+    gap: 32px;
+    margin-top: 44px;
+    margin-bottom: 40px;
+
+    height: 90%;
+    box-shadow: 0px 24px 32px -8px #00000014;
+  }
+
+  .hero__buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    gap: 24px;
+  }
+
+  .button__blue {
+    width: 45%;
+  }
+  .button__white {
+    width: 45%;
+  }
+  .posicionar__boton {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .button__desencriptar {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 90%;
+    height: 60px;
+    text-align: center;
+
+    /* bottom: 5%; */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #0a3871;
+  }
+}

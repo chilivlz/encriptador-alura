@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptador</title>
+  </head>
+
+  <body>
+    <main class="hero container">
+      <nav class="hero__nav container">
+        <figure class="hero__logo">
+          <img src="imagenes/logo-celular.svg"" alt="logo alura"
+          class="hero__alura">
+        </figure>
+      </nav>
+
+      <section class="hero__encriptador">
+        <div class="container">
+          <textarea
+            id="texto-original"
+            class="text-area container"
+            rows="12"
+            cols="50"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+          <textarea
+            class="text-area-alternativo container"
+            rows="12"
+            cols="50"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+        </div>
+        <div class="hero__message container">
+          <span><img src="imagenes/info.svg" alt="imagen de info" /></span>
+          <p class="hero__paragraph">Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="hero__buttons container">
+          <button class="button__blue" onclick="btnEncriptar()">
+            Encriptar
+          </button>
+          <button class="button__white" onclick="btnDesencriptar()">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <section class="hero__desencriptador">
+        <div class="text-area__desencriptador container">
+          <h3 class="titulo__desencriptador">Ningún mensaje fue encontrado</h3>
+          <p class="paragraph__desencriptador">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
+        <div class="text-area__desencriptador-alternativo container">
+          <figure class="dibujo">
+            <img
+              src="imagenes/Muñeco.svg"
+              alt="dibujito"
+              class="dibujo-imagen"
+            />
+          </figure>
+
+          <h3 class="titulo__desencriptador">Ningún mensaje fue encontrado</h3>
+          <p class="paragraph__desencriptador">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
+        <div class="posicionar__boton">
+          <textarea
+            id="campo-mensaje"
+            class="text-area text-area2__desencriptador container"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button class="button__desencriptar">Copiar</button>
+        </div>
+      </section>
+
+      <script src="index.js"></script>
+    </main>
+  </body>
+</html>
